@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Formulário</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <img src="./src/img/bg-header.jpg" alt="banner">
+            <a href="https://bemobile.tech/"><img class="logo" src="./src/img/bemobile.png" alt="logo"></a>
+        </div>
+        <fieldset>
+            <legend>Teste Front-End</legend>
+            <form action="" id="form">
+
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name" required>
+                
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                
+
+                <label for="telefone">Telefone</label>
+                <input type="tel" name="telefone" id="telefone"  required>
+                
+
+                <label for="cep">Cep</label>
+                <input type="text" name="cep" id="cep"  onblur="onBlur()" required>
+                
+
+                <label for="logradouro">Logradouro</label>
+                <input type="text" name="logradouro" id="logradouro" required>
+                
+
+                <label for="numero">Numero</label>
+                <input type="number" name="numero" id="numero" required>
+                
+
+                <label for="complemento">Complemento</label>
+                <input type="text" name="complemento" id="complemento" required> 
+                
+
+                <label for="bairro">Bairro</label>
+                <input type="text" name="bairro" id="bairro" required>
+                
+
+                <label for="cidade">Cidade</label>
+                <input type="text" name="cidade" id="cidade" required>
+                
+
+                <label for="estado">Estado</label>
+                <input type="text" name="estado" id="estado" required>
+                
+
+                <input type="button" value="Enviar">
+
+            </form>
+        </fieldset>
+    </div>
+
+    <script src="src/js/cep.js"></script>
+    <script src="src/js/masks.js"></script>
+    <script src="src/js/validation.js"></script>
+
+</body>
+</html>

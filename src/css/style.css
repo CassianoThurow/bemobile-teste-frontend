@@ -6,8 +6,12 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 700px;
+  grid-template-columns: 1fr;
   height: 100vh;
+}
+
+.wrapper.active {
+  grid-template-columns: 1fr 1fr;
 }
 
 img {
@@ -24,6 +28,33 @@ img.logo {
   z-index: 2;
 }
 
+.press {
+  position: absolute;
+  left: 250px;
+  top: 405px;
+  z-index: 2;
+  text-align: center;
+}
+
+.press h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 25px;
+}
+button {
+  width: 200px;
+  padding: 20px;
+  background-color: #28508d;
+  border: 2px solid #28508d;
+  color: white;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
 legend {
   padding: 10px;
   font-family: "Roboto", sans-serif;
@@ -33,11 +64,16 @@ legend {
   font-size: 25px;
 }
 
-fieldset {
+fieldset.active {
+  display: block;
   border-radius: 15px;
   padding: 20px;
   margin: 5px;
   border: 2px solid #28508d;
+}
+
+fieldset {
+  display: none;
 }
 
 label {
@@ -56,11 +92,12 @@ input {
   outline: none;
 }
 
-input[type="button"] {
+input[type="submit"] {
   width: 200px;
   padding: 20px;
   background-color: #28508d;
   border: 2px solid #28508d;
+  border-radius: 15px;
   color: white;
   font-family: "Roboto";
   font-size: 15px;
@@ -68,7 +105,7 @@ input[type="button"] {
   margin-top: 20px;
 }
 
-input[type="button"]:hover {
+input[type="submit"]:hover {
   position: relative;
   top: 1px;
   left: 1px;
@@ -82,10 +119,16 @@ input[type="button"]:hover {
 }
 
 @media (max-width: 800px) {
-  .wrapper {
+  .wrapper.active {
     grid-template-columns: 1fr;
   }
   .banner {
     display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .press {
+    left: 50px;
   }
 }

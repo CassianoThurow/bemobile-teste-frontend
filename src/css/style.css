@@ -30,7 +30,7 @@ img.logo {
 
 .press {
   position: absolute;
-  left: 250px;
+  left: 750px;
   top: 405px;
   z-index: 2;
   text-align: center;
@@ -111,11 +111,24 @@ input[type="submit"]:hover {
   left: 1px;
 }
 
-.error {
-  color: red;
-}
 .invalid {
   border: 1px solid red;
+}
+
+fieldset.active.show-right {
+  display: block;
+  animation: show-right 0.9s forwards;
+}
+
+@keyframes show-right {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media (max-width: 800px) {
@@ -125,10 +138,17 @@ input[type="submit"]:hover {
   .banner {
     display: none;
   }
+  fieldset {
+    display: block;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 5px;
+    border: 2px solid #28508d;
+  }
 }
 
 @media (max-width: 1024px) {
   .press {
-    left: 50px;
+    left: 27%;
   }
 }

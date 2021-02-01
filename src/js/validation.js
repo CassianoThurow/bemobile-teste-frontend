@@ -1,4 +1,7 @@
 const form = document.getElementById('form')
+const submit = document.querySelector('.btn')
+
+
 
 function handleChange(e){
     const target = e.target;
@@ -10,3 +13,7 @@ function handleChange(e){
 }
 form.addEventListener('change', handleChange)
 
+
+function handleSubmit() {
+    alert("Formulário enviado com sucesso !");
+}
